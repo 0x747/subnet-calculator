@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Subnet Calculator</title>
+</head>
+<body>
+    
+    <main>
+        <pre>
+             __    ____                  _
+            /   /  /   __  \               /   /     _
+           /   /  /   /_ /   |  _   _    /   /__/   /
+          /   /  /   ____/  |  | /  /  /____    /
+         /   /  /   /           |  |/  /           /   /
+        /_ /  /_ /            |__ /           /_ /
+        
+        </pre>
+        <form action="" onsubmit="return false;">
+            <input type="text" placeholder="IP Address or CIDR Block: 192.168.0.1/24" id="ipv4TxtBox">
+            <br>
+            <input type="button" value="Calculate" id="submitBtn">
+        </form>
+        <noscript style="color: tomato; padding: 1rem;">
+            This site requires JavaScript to perform calculatations.
+        </noscript>
+        <p id="error"></p>
+        <table id="resultTable" cellspacing="0">
+            <tr>
+                <td class="rowLabel">IP Address</td>
+                <td id="ipv4Addr"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Network Address</td>
+                <td id="netAddr"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Host Range</td>
+                <td id="hostRange"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Broadcast Address</td>
+                <td id="brdcastAddr"></td>
+            </tr>
+             <tr>
+                <td class="rowLabel">Total Addresses</td>
+                <td id="totalAddrs"></td>
+            </tr>
+             <tr>
+                <td class="rowLabel">Host Addresses</td>
+                <td id="hostAddrs"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Decimal Mask:</td>
+                <td id="decimalMask"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Binary Mask</td>
+                <td id="binMask"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">CIDR Notation</td>
+                <td id="cidrBlock"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Type</td>
+                <td id="addrType"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Class</td>
+                <td id="addrClass"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Integer</td>
+                <td id="intVal"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Binary</td>
+                <td id="binVal"></td>
+            </tr>
+            <tr>
+                <td class="rowLabel">Hex</td>
+                <td id="hexVal"></td>
+            </tr>
+        </table>
+    </main>
+
+    <script src="./scripts/struct/types.js"></script>
+    <script src="./scripts/struct/interface.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/wasmAPI.js"></script>
+    <script src="./scripts/main.js"></script>
+
+</body>
+</html>
